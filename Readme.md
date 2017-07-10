@@ -1,4 +1,5 @@
-![screencast](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)
+Original project location: https://github.com/MichaelDimmitt/Aerial_Desktop.git
+<br>![screencast](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)
 
 # Screen Saver to Desktop Background on Startup
 Only for Macintosh Computers, enjoy. <br>
@@ -6,30 +7,24 @@ If you can think of a better name please let me know.
 
 Completely open source so feel free to contribute to or learn from project development.
 
-Requirements: RVM, Ruby
+Requirements: Macintosh Computer
 
-## (macintosh) How do I package this repository in it's current form?
-1) git clone https://github.com/shoes/shoes4.git
-2) git clone https://github.com/MichaelDimmitt/aerial_desktop_with_shoes.git
-3) cd shoes4
-4) rvm install jruby-9.1.8.0
-5) bundle install
-6) bin/shoes package --mac ../aerial_desktop_with_shoes/Shoes.rb
-7) open ../aerial_desktop_with_shoes/pkg/Shoes.app
+## Setup
+1) git clone https://github.com/MichaelDimmitt/aerial_desktop_with_shoes.git
+2) cd aerial_desktop_with_shoes
+3) git checkout packaged
 
-note(as shown in instructions app will be in pkg folder inside aerial_desktop_with_shoes_
-## How the program works after packaged.
+## Installation (steps 1-2):
 1) open Shoes.app
-2) click install button and follow directions to install.
-3) click uninstall button to uninstall.
-
-4) Shoes.app clones Aerial_Desktop to ~
-5) to completely uninstall, click uninstall button after opening Shoes.app and ... (step 6)
-6) in terminal, ```cd ~; rm -rf Aerial_Desktop```
+2) click install and follow resulting instructions.
 
 
-## Usage:
-Setting the program as your Desktop Background can be toggled after installation with "Start.app and "Stop.app" ... implementing "Stop.app" will leave "Aerial" as your default screensaver. This app can support other Screensavers as Backgrounds. If you would like that email me at michaelgdimmitt@gmail.com or open an issue.
+## Complete Uninstall (steps 1-3):
+1) open Shoes.app
+2) click uninstall button after opening Shoes.app
+
+note) Shoes.app clones Aerial_Desktop to "~" directory
+3) in terminal, ```cd ~; rm -rf Aerial_Desktop```
 
 ## Adjusting Aerial Settings
 
@@ -62,6 +57,10 @@ I appreciate all pull requests.
 
 ## Useful Links
 
+#### When I wanted a graphical user interface for install and uninstall:
+https://github.com/shoes/shoes4
+https://github.com/MichaelDimmitt/install_uninstall_shoes
+
 #### When I wanted the screensaver as a desktop background these were the windows to the solution.
 
 <a href="http://www.techradar.com/how-to/computing/apple/easy-mac-hacks-set-screen-saver-as-desktop-background-1305622">techradar_article_By_MacLife_Set_Screen_Saver_as_Desktop_Background</a>
@@ -72,3 +71,5 @@ https://github.com/MichaelDimmitt/mac_plist_launch_agent
 
 ## License
 [MIT License](https://raw.githubusercontent.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/master/LICENSE)
+
+
