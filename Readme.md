@@ -1,27 +1,74 @@
-# Template for an install/uninstall gui.
-### Use this template to make a Programmer agnostic mac application.
-### Package .app executables.
-### Enable users without programming experience to click install and uninstall your program.
+![screencast](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)
 
-![screen shot 2017-05-06 at 3 35 15 pm](https://cloud.githubusercontent.com/assets/11463275/25775377/cf6d9942-3271-11e7-80fe-0a11e757883a.png)
+# Screen Saver to Desktop Background on Startup
+Only for Macintosh Computers, enjoy. <br>
+If you can think of a better name please let me know.
+
+Completely open source so feel free to contribute to or learn from project development.
+
+Requirements: RVM, Ruby
 
 ## (macintosh) How do I package this repository in it's current form?
 1) git clone https://github.com/shoes/shoes4.git
-2) git clone https://github.com/MichaelDimmitt/install_uninstall_shoes4.git
+2) git clone https://github.com/MichaelDimmitt/aerial_desktop_with_shoes.git
 3) cd shoes4
 4) rvm install jruby-9.1.8.0
-5) bin/shoes package --mac ../install_uninstall_shoes4/Shoes.rb
-7) app can be found in "pkg" folder should be created in repo install_uninstall_shoes4/
+5) bundle install
+6) bin/shoes package --mac ../aerial_desktop_with_shoes/Shoes.rb
+7) open ../aerial_desktop_with_shoes/pkg/Shoes.app
 
-## How to connect your program's install and uninstall to the project
-1) cd install_uninstall_shoes4/app
-2) substitute install_driver.rb and uninstall_driver.rb with your install script and uninstall script.
-3) executables must be ruby.rb scripts.
+note(as shown in instructions app will be in pkg folder inside aerial_desktop_with_shoes_
+## How the program works after packaged.
+1) open Shoes.app
+2) click install button and follow directions to install.
+3) click uninstall button to uninstall.
 
-## Useful links
+4) Shoes.app clones Aerial_Desktop to ~
+5) to completely uninstall, click uninstall button after opening Shoes.app and ... (step 6)
+6) in terminal, ```cd ~; rm -rf Aerial_Desktop```
 
-project abstracted from shoes main page:<br>
-http://shoesrb.com/
-![image](https://cloud.githubusercontent.com/assets/11463275/25774919/c945e2aa-3266-11e7-870e-6b0146bb825e.png)
 
-### Interested in output for current shoes4 packaging? see report: [#4](../../../../MichaelDimmitt/install_uninstall_shoes4/issues/4)
+## Usage:
+Setting the program as your Desktop Background can be toggled after installation with "Start.app and "Stop.app" ... implementing "Stop.app" will leave "Aerial" as your default screensaver. This app can support other Screensavers as Backgrounds. If you would like that email me at michaelgdimmitt@gmail.com or open an issue.
+
+## Adjusting Aerial Settings
+
+1. Open System Preferences -> Desktop & Screen Saver -> Screen Saver
+2. Choose Aerial and click on Screen Saver Options to select your settings.
+
+![Screenshot](https://cloud.githubusercontent.com/assets/499192/10754102/c58cc076-7c95-11e5-9579-4275740ba339.png)
+
+
+<hr>
+
+## Aerial Installed by default with project.
+
+If you only want Aerial as a screensaver without the desktop change, simply open **Uninstall.app**<br>
+and you are done! The afterward uninstall steps are for removing the Aerial Screensaver.
+
+To find more information on Aerial navigate to:
+https://github.com/JohnCoates/Aerial<br><hr>
+
+## Note:
+
+The screensaver engine takes your default screensaver to project as a desktop background.<br>
+
+## Community
+- **Found a bug?** [Open an issue](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/issues/new). Try to be as specific as possible.
+- **Have a feature request?** [Open an issue](https://github.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/issues/new). Tell me why this feature would be useful, and why you and others would want it.
+
+## Contribute
+I appreciate all pull requests.
+
+## Useful Links
+
+#### When I wanted the screensaver as a desktop background these were the windows to the solution.
+
+<a href="http://www.techradar.com/how-to/computing/apple/easy-mac-hacks-set-screen-saver-as-desktop-background-1305622">techradar_article_By_MacLife_Set_Screen_Saver_as_Desktop_Background</a>
+
+#### When I wanted the change to happen when the computer woke from sleep:
+https://nathangrigg.com/2012/07/schedule-jobs-using-launchd
+https://github.com/MichaelDimmitt/mac_plist_launch_agent
+
+## License
+[MIT License](https://raw.githubusercontent.com/MichaelDimmitt/ScreenSaver_to_DesktopBackground_mac/master/LICENSE)
